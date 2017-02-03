@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalWeatherAngular.Web", "GlobalWeatherAngular.Web\GlobalWeatherAngular.Web.csproj", "{5DFD642C-93FF-4D33-A9EB-932E8FD4DAF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalWeatherAngular.Tests", "GlobalWeatherAngular.Tests\GlobalWeatherAngular.Tests.csproj", "{D4AF639E-6321-48AD-A057-2F412A9C47F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DFD642C-93FF-4D33-A9EB-932E8FD4DAF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFD642C-93FF-4D33-A9EB-932E8FD4DAF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DFD642C-93FF-4D33-A9EB-932E8FD4DAF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DFD642C-93FF-4D33-A9EB-932E8FD4DAF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4AF639E-6321-48AD-A057-2F412A9C47F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4AF639E-6321-48AD-A057-2F412A9C47F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4AF639E-6321-48AD-A057-2F412A9C47F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4AF639E-6321-48AD-A057-2F412A9C47F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

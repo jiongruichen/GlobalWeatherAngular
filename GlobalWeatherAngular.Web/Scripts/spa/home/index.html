@@ -1,0 +1,47 @@
+﻿<hr />
+<div class="row">
+    <div class="col-md-8">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Weather</h3>
+            </div>
+
+            <div class="panel-body">
+                <div ng-if="loadingCountries">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        <i class="fa fa-refresh fa-5x fa-spin"></i><label class="label label-primary">Loading countries...</label>
+                    </div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <div>
+                    <select ng-model="country" ng-options="option for option in countries" ng-change="getCityData(country)">
+                        <option value="">Select Country</option>
+                    </select>
+                </div>
+                <br />
+                <div>
+                    <select ng-model="city" ng-options="option for option in cities" ng-change="getWeatherData(city)" ng-init="form.type=typeOptions[0].value">
+                        <option value="">Select City</option>
+                    </select>
+                </div>
+
+                <div class="panel-body" ng-if="!loadingWeather">
+                    <div class="media">
+                        <div class="media-body">
+                            Location: <label>{{ weather.Location }}</label><br />
+                            Time: <label>{{ weather.Time }}</label><br />
+                            Wind: <label>{{ weather.Wind }}</label><br />
+                            Visibility: <label>{{ weather.Visibility }}</label><br />
+                            Sky Conditions: <label>{{ weather.SkyConditions }}</label><br />
+                            Temperature: <label>{{ weather.Temperature }}</label><br />
+                            Dew Point: <label>{{ weather.DewPoint }}</label><br />
+                            Relative Humidity: <label>{{ weather.RelativeHumidity }}</label><br />
+                            Pressure: <label>{{ weather.Pressure }}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
