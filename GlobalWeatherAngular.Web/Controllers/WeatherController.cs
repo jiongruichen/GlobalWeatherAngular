@@ -57,7 +57,7 @@ namespace GlobalWeatherAngular.Web.Controllers
 
         private double ConvertFromKelvin(double kel)
         {
-            return kel - 273;
+            return Math.Round(kel - 273, 2, MidpointRounding.AwayFromZero);
         }
     }
 }

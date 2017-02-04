@@ -47,8 +47,15 @@
         }
 
         function citiesLoadCompleted(result) {
-            $scope.cities = result.data;
-            clearWeather();
+            if (result.data.length > 0) {
+                $scope.cities = result.data;
+                $scope.city = $scope.cities[0];
+                clearWeather();
+                $scope.getWeatherData($scope.city);
+            } else {
+                notificationService.displayError("No data found.");
+                clearCities();
+            }
         }
 
         function citiesLoadFailed(response) {
@@ -56,7 +63,12 @@
         }
 
         function weatherLoadCompleted(result) {
-            $scope.weather = result.data
+            if (result.data.Location != null) {
+                $scope.weather = result.data
+            } else {
+                notificationService.displayError("No data found.");
+                clearWeather();
+            }
             $scope.loadingWeather = false;
         }
 

@@ -5,15 +5,17 @@
         .config(config)
         .run(run);
 
-    config.$inject = ['$routeProvider'];
+    config.$inject = ['$routeProvider', '$locationProvider'];
 
-    function config($routeProvider) {
+    function config($routeProvider, $locationProvider) {
         $routeProvider
             .when("/", {
                 templateUrl: "/scripts/spa/home/index.html",
                 controller: "indexCtrl"
             })
             .otherwise({ redirectTo: "/" });
+
+        $locationProvider.html5Mode(true);
     }
 
     run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];
