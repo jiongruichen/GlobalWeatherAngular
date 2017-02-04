@@ -21,7 +21,7 @@
                 </div>
                 <br />
                 <div>
-                    <select ng-model="city" ng-options="option for option in cities" ng-change="getWeatherData(city)" ng-init="form.type=typeOptions[0].value">
+                    <select ng-model="city" ng-options="option for option in cities" ng-change="getWeatherData(city)" ng-init="city=cities[0]">
                         <option value="">Select City</option>
                     </select>
                 </div>
