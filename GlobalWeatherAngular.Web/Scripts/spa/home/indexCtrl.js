@@ -53,7 +53,7 @@
                 clearWeather();
                 $scope.getWeatherData($scope.city);
             } else {
-                notificationService.displayError("No data found.");
+                notificationService.displayWarning("No data found.");
                 clearCities();
             }
         }
@@ -66,7 +66,7 @@
             if (result.data.Location != null) {
                 $scope.weather = result.data
             } else {
-                notificationService.displayError("No data found.");
+                notificationService.displayWarning("No data found.");
                 clearWeather();
             }
             $scope.loadingWeather = false;
